@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi-webfont/Satoshi-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Satoshi", sans-serif;
+  background-color: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  padding: 15px;
+  border-radius: 40px;
+  margin-top: 25px;
+}
+
+header {
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.nav li a {
+  padding: 3px 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.rightBtn {
+  text-align: right;
+}
+
+.rightBtn a {
+  background-color: #FF6600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.rightBtn a i {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  background-color: #000;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.heroSection {
+  background-image: url(../images/heroBg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: DM Sans;
+  padding: 150px 0px 100px 0px;
+}
+.heroSection h1 {
+  font-weight: 600;
+  font-size: 70px;
+  color: #fff;
+}
+.heroSection h1 span {
+  color: #FF6600;
+}
+.heroSection p {
+  font-family: Satoshi;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.heroSection a {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.heroSection a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #FF6600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+  z-index: 0;
+  border-radius: 30px;
+}
+.heroSection a button {
+  position: relative;
+  background-color: #FF6600;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  z-index: 1;
+}
+.heroSection a i {
+  position: relative;
+  display: flex;
+  margin-left: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.heroSection a:hover::before {
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+.heroSection a:hover {
+  transition: all 0.3s ease;
+}
+.heroSection a:hover i {
+  margin-left: -10px;
+  transition: all 0.3s ease;
+}
+
+.aboutUsSection {
+  background: linear-gradient(180deg, #0C0806 0%, #3B1B06 21.15%, #482005 48.08%, #381A06 70.67%, #000000 100%);
+  padding: 50px 0px;
+}
+.aboutUsSection .ourPartners {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px 0px;
+}
+.aboutUsSection .ourPartners .item {
+  min-height: 60px;
+  align-content: center;
+}
+.aboutUsSection .ourPartners img {
+  max-width: 100%;
+  width: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.aboutUsSection .ourQuotelines {
+  margin: 50px 0px;
+}
+.aboutUsSection .ourQuotelines h2 {
+  font-family: Satoshi;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+}
+.aboutUsSection .ourQuotelines h3 {
+  font-family: Satoshi;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+.aboutUsSection .ourQuotelines .quoteImg img {
+  max-width: 100%;
+}
+.aboutUsSection .ourMissionAndVision h2 {
+  font-family: Satoshi;
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff;
+}
+.aboutUsSection .ourMissionAndVision .images {
+  display: flex;
+  position: relative;
+}
+.aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon) {
+  max-width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 28%;
+}
+.aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon):nth-child(2) {
+  margin-top: 80px;
+  margin-left: -3%;
+}
+.aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon):nth-child(3) {
+  margin-top: 160px;
+  margin-left: -3%;
+}
+.aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon):nth-child(4) {
+  margin-left: -3%;
+}
+.aboutUsSection .ourMissionAndVision .images .metaAddIcon {
+  position: absolute;
+  left: -75px;
+  bottom: 200px;
+  max-width: 100%;
+  z-index: 99;
+  width: 150px;
+}
+.aboutUsSection .statsWrapper {
+  background-color: #40260F;
+  padding: 15px 0px;
+}
+.aboutUsSection .statsWrapper .statBox {
+  text-align: center;
+}
+.aboutUsSection .statsWrapper .statBox h2 {
+  font-family: Satoshi;
+  font-weight: 600;
+  color: #705c4b;
+  font-size: 25px;
+}
+.aboutUsSection .statsWrapper .statBox h3 {
+  color: #FF6600;
+  font-family: Satoshi;
+  font-weight: bold;
+  font-size: 36px;
+}
+.aboutUsSection .statsWrapper .statBox p {
+  font-family: Satoshi;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.aboutUsSection .ourStory h2 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+.aboutUsSection .ourStory p {
+  font-family: DM Sans;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.aboutUsSection .rightImg,
+.aboutUsSection .rightImg2 {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  z-index: 99;
+  width: 90px;
+}
+.aboutUsSection .rightImg2 {
+  top: 40%;
+}
+.aboutUsSection .leftImg {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  z-index: 99;
+  width: 100px;
+}
+
+.whyUs h2 {
+  font-family: Satoshi;
+  font-weight: 600;
+  font-size: 50px;
+  color: #000;
+}
+.whyUs h2 strong {
+  color: #FF6600;
+  font-weight: bolder;
+}
+.whyUs p {
+  font-family: Satoshi;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+}
+.whyUs a {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.whyUs a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #FF6600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+  z-index: 0;
+  border-radius: 30px;
+}
+.whyUs a button {
+  position: relative;
+  background-color: #FF6600;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  z-index: 1;
+}
+.whyUs a i {
+  position: relative;
+  display: flex;
+  margin-left: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.whyUs a:hover::before {
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+.whyUs a:hover {
+  transition: all 0.3s ease;
+}
+.whyUs a:hover i {
+  margin-left: -10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000;
+}
+.whyUs .whyUsImg img {
+  max-width: 100%;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Worker Demo - Sum Calculator</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 8px; font-size: 16px; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Sum of 1 to N using Web Worker</h2>
+
+  <input type="number" id="numberInput" placeholder="Enter a large number (e.g. 100000000)" />
+  <button onclick="calculateSum()">Calculate</button>
+
+
+  <input type="number" id="numberInput2" placeholder="Enter a large number (e.g. 100000000)" />
+  <button onclick="myWorker()">Calculate my worker</button>
+  <div>
+    <strong id="result2"></strong>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    // Create worker
+    const worker = new Worker('worker.js');
+
+    // When result comes from worker
+    worker.onmessage = function(event) {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerText = `Sum: ${event.data}`;
+    };
+
+    function calculateSum() {
+      const num = parseInt(document.getElementById('numberInput').value);
+      if (isNaN(num) || num <= 0) {
+        alert("Please enter a valid number > 0");
+        return;
+      }
+
+      document.getElementById('result').innerText = "Calculating...";
+      worker.postMessage(num); // Send number to worker
+    }
+  </script>
+
+<script>
+    const worker2 = new Worker('worker2.js');
+
+    worker2.onmessage = function(event) {
+        data = event.data;
+        document.getElementById('result2').innerText = data;
+    }
+    function myWorker() {
+        const num = parseInt(document.getElementById('numberInput2').value);
+        if (isNaN(num) || num <= 0) {
+            alert("Please enter a valid number > 0");
+            return;
+        }
+        worker2.postMessage(num);
+    }
+</script>
+</body>
+</html>
