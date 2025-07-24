@@ -12,6 +12,7 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -30,6 +31,12 @@ nav {
     padding: 15px;
     border-radius: 40px;
     margin-top: 25px;
+    .nav .rightBtn{
+        display: none;
+    }
+}
+nav.active{
+    border-radius: 3px;
 }
 
 header {
@@ -45,6 +52,10 @@ header {
 .logo img {
     max-width: 100%;
     height: auto;
+}
+
+.hamburger {
+    display: none;
 }
 
 .nav {
@@ -97,7 +108,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    font-family: DM Sans;
+    font-family: "DM Sans", sans-serif;
     padding: 150px 0px 100px 0px;
 
     h1 {
@@ -111,7 +122,8 @@ header {
     }
 
     p {
-        font-family: Satoshi;
+        font-family: 'Satoshi', sans-serif;
+
         font-weight: 400;
         font-size: 18px;
         color: #fff;
@@ -196,6 +208,11 @@ header {
         border-radius: 30px;
         padding: 10px 0px;
 
+        .owl-dots,
+        .owl-nav {
+            display: none;
+        }
+
         .item {
             min-height: 60px;
             align-content: center;
@@ -211,28 +228,31 @@ header {
     .ourQuotelines {
         margin: 50px 0px;
 
+        font-family: 'Satoshi', sans-serif;
+
         h2 {
-            font-family: Satoshi;
+
             font-weight: 500;
             font-size: 25px;
             color: #fff;
         }
 
         h3 {
-            font-family: Satoshi;
+
             font-weight: 700;
             font-size: 30px;
             color: #fff;
         }
 
         .quoteImg img {
-            max-width: 100%;
+            width: 100%;
         }
     }
 
     .ourMissionAndVision {
         h2 {
-            font-family: Satoshi;
+            font-family: 'Satoshi', sans-serif;
+
             font-weight: 600;
             font-size: 30px;
             color: #fff;
@@ -276,12 +296,13 @@ header {
     .statsWrapper {
         background-color: #40260F;
         padding: 15px 0px;
+        font-family: 'Satoshi', sans-serif;
 
         .statBox {
             text-align: center;
 
             h2 {
-                font-family: Satoshi;
+                // font-family: Satoshi;
                 font-weight: 600;
                 color: #705c4b;
                 font-size: 22px;
@@ -289,13 +310,13 @@ header {
 
             h3 {
                 color: #FF6600;
-                font-family: Satoshi;
+                // font-family: Satoshi;
                 font-weight: bold;
                 font-size: 36px;
             }
 
             p {
-                font-family: Satoshi;
+                // font-family: Satoshi;
                 font-weight: 500;
                 font-size: 12px;
                 color: #9b9b9b;
@@ -313,7 +334,7 @@ header {
         }
 
         p {
-            font-family: DM Sans;
+            font-family: "DM Sans", sans-serif;
             font-weight: 400;
             font-size: 16px;
             color: #fff;
@@ -366,10 +387,11 @@ header {
 }
 
 .whyUs {
+    font-family: 'Satoshi', sans-serif;
 
-
+    // 
     h2 {
-        font-family: Satoshi;
+        // font-family: Satoshi;
         font-weight: 600;
         font-size: 50px;
         color: #000;
@@ -381,7 +403,7 @@ header {
     }
 
     p {
-        font-family: Satoshi;
+        // font-family: Satoshi;
         font-weight: 400;
         font-size: 20px;
         color: #000;
@@ -455,10 +477,11 @@ header {
         }
     }
 
-    .whyUsImg {
-        img {
-            max-width: 100%;
-        }
+}
+
+.whyUsImg {
+    img {
+        max-width: 100%;
     }
 }
 
@@ -473,7 +496,8 @@ header {
     }
 
     h3 {
-        font-family: Inter;
+        font-family: "Inter", sans-serif;
+
         font-weight: 700;
         font-size: 24px;
         color: #fff;
@@ -514,7 +538,8 @@ header {
         padding: 50px 0px;
 
         h2 {
-            font-family: Satoshi;
+            font-family: 'Satoshi', sans-serif;
+
             font-weight: 700;
             font-size: 25px;
         }
@@ -547,7 +572,8 @@ header {
 
         a {
             background-color: #fff;
-            font-family: Inter;
+            font-family: "Inter", sans-serif;
+
             font-weight: 700;
             font-size: 13px;
             color: #000;
@@ -669,4 +695,724 @@ header {
 .timeline-step.active .timeline-number {
     background: #FF6600;
     box-shadow: 0 0 0 3px #FF6600;
+}
+
+
+.testimonialSec {
+    background: linear-gradient(180deg, #000000 0%, #572605 34.13%, #000000 100%);
+    padding: 80px;
+    color: #fff;
+
+    .owl-dots {
+        display: none;
+    }
+
+    h2 {
+        font-family: 'Satoshi', sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 50px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        text-align: end;
+        top: -90px;
+        right: 0px;
+
+        .owl-prev {
+            margin-right: 40px;
+        }
+    }
+
+    .testimonials {
+        background-color: #4b2c17;
+        border-radius: 24px;
+        padding: 20px;
+        min-height: 200px;
+
+
+        h3 {
+            font-family: "Outfit", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: end;
+        }
+
+        p {
+            font-family: "Outfit", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 50px;
+                width: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+                object-fit: contain;
+            }
+
+
+            h4 {
+                font-family: 'Satoshi', sans-serif;
+
+                font-weight: 500;
+                font-size: 16px;
+
+                span {
+                    display: block;
+                    // font-family: Satoshi;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.4);
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+.faqSec {
+    font-family: 'Satoshi', sans-serif;
+
+    span {
+        border: 1px solid #000000;
+        display: inline-block;
+        padding: 5px 20px;
+        font-weight: 400;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 40px;
+
+        strong {
+            color: #FF6600;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    a {
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        max-width: 180px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: #FF6600;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease;
+            z-index: 0;
+            border-radius: 30px;
+        }
+
+        button {
+            position: relative;
+            background-color: #FF6600;
+            padding: 10px 30px;
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            z-index: 1;
+        }
+
+        i {
+            position: relative;
+            display: flex;
+            margin-left: 3px;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 10px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            transition: all 0.3s ease;
+
+            i {
+                margin-left: -10px;
+                transition: all 0.3s ease;
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+}
+
+.accordiansWrapper {
+    background-color: #D9D9D9;
+    border-radius: 24px;
+    padding: 20px;
+
+    .accordion-button,
+    .accordion-item,
+    .accordion {
+        background-color: transparent;
+    }
+
+
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    /* Remove Bootstrap's default arrow */
+    .accordion-button::after {
+        background-image: none !important;
+        font-family: "Font Awesome 6 Free";
+        /* Or 5 if you're using FA5 */
+        font-weight: 900;
+        /* Required for solid icons */
+        content: "\f0d7";
+        /* fa-caret-down */
+        width: auto;
+        transition: transform 0.2s;
+    }
+
+    /* When expanded, show up arrow */
+    .accordion-button:not(.collapsed)::after {
+        content: "\f0d8";
+        /* fa-caret-up */
+    }
+
+}
+
+
+footer {
+    background: linear-gradient(180deg, #000000 0%, #572605 34.13%, #000000 100%);
+    padding-top: 50px;
+    color: #fff;
+    font-family: 'Satoshi', sans-serif;
+
+    .footerLogo {
+        img {
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    .footerLinks,
+    .socialLinks {
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li a {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .address {
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+
+        }
+
+        .newsLatter {
+            border-bottom: 1px solid #9e938b;
+            padding-bottom: 10px;
+
+            label {
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+
+            i {
+                font-size: 20px;
+            }
+
+            input {
+                border: none;
+                background-color: transparent;
+                padding-left: 20px;
+                width: 100%;
+                color: #fff;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                    border: none;
+                    color: #fff;
+                }
+            }
+
+            button {
+                background-color: #FF6600;
+                color: #fff;
+                border-radius: 50%;
+                display: inline-block;
+                height: 30px;
+                width: 30px;
+                outline: none;
+                border: none;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .errorBox {
+            font-size: 14px;
+            font-weight: 500;
+            display: none;
+            color: red;
+        }
+
+    }
+
+    .contacts {
+
+        span,
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .copyRight {
+        background-color: #000;
+        text-align: center;
+        padding: 25px 0px;
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 1199.98px) {
+    .rightBtn a {
+        padding: 10px 18px;
+    }
+
+}
+
+
+
+// Media Query: Large tablets and below (max-width: 991.98px)
+@media screen and (max-width: 991.98px) {
+    .rightBtn {
+        a {
+            padding: 10px 11px;
+            font-size: 12px;
+
+            i {
+                display: none;
+            }
+        }
+    }
+
+    .heroSection {
+        min-height: auto;
+
+        h1 {
+            font-size: 60px;
+        }
+    }
+
+    .whyUsImg {
+        display: none;
+    }
+
+    .whyUs {
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .whyUsCards {
+        padding: 12px;
+
+        h3 {
+            font-size: 16px;
+            word-break: break-all;
+        }
+
+        img {
+            max-width: 30px;
+        }
+    }
+
+    .footerLogo {
+        p br {
+            display: none;
+        }
+    }
+
+    footer .contacts {
+
+        span,
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+// Media Query: Tablets and below (max-width: 767.98px)
+@media screen and (max-width: 767.98px) {
+
+    .nav,
+    .rightBtn {
+        display: none;
+    }
+
+    nav .nav {
+        margin: 20px 0px;
+
+        li {
+            margin: 10px 0px;
+        }
+
+        .rightBtn {
+            display: inline-block;
+            a {
+                background-color: #FF6600;
+                padding: 5px 20px;
+                border-radius: 30px;
+                color: #fff;
+                font-weight: 500;
+                text-decoration: none;
+                font-family: "Inter", sans-serif;
+                max-width: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-left: auto;
+
+                i {
+                    display: flex;
+                    margin-left: auto;
+                    justify-content: center;
+                    align-items: center;
+                    width: 18px;
+                    height: 18px;
+                    background-color: #000;
+                    border-radius: 50%;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+
+        i {
+            font-size: 22px;
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .heroSection {
+        h1 {
+            font-size: 44px;
+        }
+    }
+
+    .aboutUsSection {
+        .ourQuotelines {
+            h3 {
+                font-size: 26px;
+            }
+        }
+
+        .statsWrapper {
+            .statBox {
+                margin-bottom: 20px;
+            }
+        }
+
+        .ourPartners {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    .quoteImg {
+        margin-bottom: 20px;
+    }
+
+    .whyUs {
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .testimonialSec {
+        h2 {
+            font-size: 26px;
+        }
+
+        .owl-nav {
+            top: -72px;
+        }
+    }
+
+    footer .contacts {
+
+        span,
+        a {
+            font-size: 12px;
+        }
+    }
+}
+
+// Media Query: Mobile landscape and below (max-width: 576.98px)
+@media screen and (max-width: 576.98px) {
+    .heroSection {
+        padding: 115px 0px 30px 0px;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        a button {
+            padding: 7px 30px;
+        }
+    }
+
+    .aboutUsSection {
+        .ourMissionAndVision {
+            .images {
+                img:not(.metaAddIcon):nth-child(2) {
+                    margin-top: 50px;
+                }
+
+                img:not(.metaAddIcon):nth-child(3) {
+                    margin-top: 100px;
+                }
+
+                .metaAddIcon {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .whyUs {
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    .whyUsCards {
+        h3 {
+            font-size: 15px;
+            word-break: normal;
+        }
+    }
+
+    .ourServicesSec {
+        .service {
+            img:not(.arrowBlack) {
+                max-width: 100px;
+                margin-top: -65px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            a {
+                font-weight: 600;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .testimonialSec {
+        padding: 50px 20px;
+
+        .owl-nav {
+            display: none;
+        }
+    }
+
+    .accordiansWrapper {
+        padding: 15px;
+    }
+
+    .timeline-number {
+        width: 40px;
+        height: 40px;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-step {
+        padding-left: 55px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .leftImg,
+    .rightImg,
+    .rightImg2 {
+        display: none;
+    }
+}
+
+// Media Query: Mobile portrait (max-width: 425.98px)
+@media screen and (max-width: 425.98px) {
+    .heroSection {
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .aboutUsSection {
+        .ourQuotelines {
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+        }
+
+        .ourMissionAndVision {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .whyUs {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .ourServicesSec {
+        .top {
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .service {
+            padding: 10px 10px 65px 10px;
+
+            a {
+                min-width: 90%;
+
+                .arrowBlack {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .ourServices {
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .testimonialSec {
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .faqSec {
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    .accordiansWrapper {
+        padding: 15px 5px;
+    }
 }

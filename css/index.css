@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @font-face {
@@ -26,6 +27,13 @@ nav {
   border-radius: 40px;
   margin-top: 25px;
 }
+nav .nav .rightBtn {
+  display: none;
+}
+
+nav.active {
+  border-radius: 3px;
+}
 
 header {
   background-color: transparent;
@@ -38,6 +46,10 @@ header {
 .logo img {
   max-width: 100%;
   height: auto;
+}
+
+.hamburger {
+  display: none;
 }
 
 .nav {
@@ -88,7 +100,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  font-family: DM Sans;
+  font-family: "DM Sans", sans-serif;
   padding: 150px 0px 100px 0px;
 }
 .heroSection h1 {
@@ -100,7 +112,7 @@ header {
   color: #FF6600;
 }
 .heroSection p {
-  font-family: Satoshi;
+  font-family: "Satoshi", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
@@ -173,6 +185,10 @@ header {
   border-radius: 30px;
   padding: 10px 0px;
 }
+.aboutUsSection .ourPartners .owl-dots,
+.aboutUsSection .ourPartners .owl-nav {
+  display: none;
+}
 .aboutUsSection .ourPartners .item {
   min-height: 60px;
   align-content: center;
@@ -185,24 +201,23 @@ header {
 }
 .aboutUsSection .ourQuotelines {
   margin: 50px 0px;
+  font-family: "Satoshi", sans-serif;
 }
 .aboutUsSection .ourQuotelines h2 {
-  font-family: Satoshi;
   font-weight: 500;
   font-size: 25px;
   color: #fff;
 }
 .aboutUsSection .ourQuotelines h3 {
-  font-family: Satoshi;
   font-weight: 700;
   font-size: 30px;
   color: #fff;
 }
 .aboutUsSection .ourQuotelines .quoteImg img {
-  max-width: 100%;
+  width: 100%;
 }
 .aboutUsSection .ourMissionAndVision h2 {
-  font-family: Satoshi;
+  font-family: "Satoshi", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #fff;
@@ -239,24 +254,22 @@ header {
 .aboutUsSection .statsWrapper {
   background-color: #40260F;
   padding: 15px 0px;
+  font-family: "Satoshi", sans-serif;
 }
 .aboutUsSection .statsWrapper .statBox {
   text-align: center;
 }
 .aboutUsSection .statsWrapper .statBox h2 {
-  font-family: Satoshi;
   font-weight: 600;
   color: #705c4b;
   font-size: 22px;
 }
 .aboutUsSection .statsWrapper .statBox h3 {
   color: #FF6600;
-  font-family: Satoshi;
   font-weight: bold;
   font-size: 36px;
 }
 .aboutUsSection .statsWrapper .statBox p {
-  font-family: Satoshi;
   font-weight: 500;
   font-size: 12px;
   color: #9b9b9b;
@@ -269,7 +282,7 @@ header {
   color: #fff;
 }
 .aboutUsSection .ourStory p {
-  font-family: DM Sans;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #fff;
@@ -308,8 +321,10 @@ header {
   width: 100px;
 }
 
+.whyUs {
+  font-family: "Satoshi", sans-serif;
+}
 .whyUs h2 {
-  font-family: Satoshi;
   font-weight: 600;
   font-size: 50px;
   color: #000;
@@ -319,7 +334,6 @@ header {
   font-weight: bolder;
 }
 .whyUs p {
-  font-family: Satoshi;
   font-weight: 400;
   font-size: 20px;
   color: #000;
@@ -385,7 +399,8 @@ header {
   background-color: #fff;
   color: #000;
 }
-.whyUs .whyUsImg img {
+
+.whyUsImg img {
   max-width: 100%;
 }
 
@@ -399,7 +414,7 @@ header {
   max-width: 50px;
 }
 .whyUsCards h3 {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #fff;
@@ -436,7 +451,7 @@ header {
   padding: 50px 0px;
 }
 .ourServicesSec .top h2 {
-  font-family: Satoshi;
+  font-family: "Satoshi", sans-serif;
   font-weight: 700;
   font-size: 25px;
 }
@@ -463,7 +478,7 @@ header {
 }
 .ourServicesSec .service a {
   background-color: #fff;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: #000;
@@ -565,4 +580,529 @@ header {
 .timeline-step.active .timeline-number {
   background: #FF6600;
   box-shadow: 0 0 0 3px #FF6600;
+}
+
+.testimonialSec {
+  background: linear-gradient(180deg, #000000 0%, #572605 34.13%, #000000 100%);
+  padding: 80px;
+  color: #fff;
+}
+.testimonialSec .owl-dots {
+  display: none;
+}
+.testimonialSec h2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 50px;
+}
+.testimonialSec .owl-nav {
+  position: absolute;
+  text-align: end;
+  top: -90px;
+  right: 0px;
+}
+.testimonialSec .owl-nav .owl-prev {
+  margin-right: 40px;
+}
+.testimonialSec .testimonials {
+  background-color: #4b2c17;
+  border-radius: 24px;
+  padding: 20px;
+  min-height: 200px;
+}
+.testimonialSec .testimonials h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: end;
+}
+.testimonialSec .testimonials p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.testimonialSec .testimonials .user {
+  display: flex;
+  align-items: center;
+}
+.testimonialSec .testimonials .user img {
+  width: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.testimonialSec .testimonials .user h4 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.testimonialSec .testimonials .user h4 span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  padding-top: 5px;
+}
+
+.faqSec {
+  font-family: "Satoshi", sans-serif;
+}
+.faqSec span {
+  border: 1px solid #000000;
+  display: inline-block;
+  padding: 5px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.faqSec h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.faqSec h2 strong {
+  color: #FF6600;
+}
+.faqSec p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.faqSec a {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.faqSec a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #FF6600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+  z-index: 0;
+  border-radius: 30px;
+}
+.faqSec a button {
+  position: relative;
+  background-color: #FF6600;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  z-index: 1;
+}
+.faqSec a i {
+  position: relative;
+  display: flex;
+  margin-left: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.faqSec a:hover::before {
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+.faqSec a:hover {
+  transition: all 0.3s ease;
+}
+.faqSec a:hover i {
+  margin-left: -10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000;
+}
+
+.accordiansWrapper {
+  background-color: #D9D9D9;
+  border-radius: 24px;
+  padding: 20px;
+  /* Remove Bootstrap's default arrow */
+  /* When expanded, show up arrow */
+}
+.accordiansWrapper .accordion-button,
+.accordiansWrapper .accordion-item,
+.accordiansWrapper .accordion {
+  background-color: transparent;
+}
+.accordiansWrapper .accordion-button:focus {
+  box-shadow: none;
+}
+.accordiansWrapper .accordion-button::after {
+  background-image: none !important;
+  font-family: "Font Awesome 6 Free";
+  /* Or 5 if you're using FA5 */
+  font-weight: 900;
+  /* Required for solid icons */
+  content: "\f0d7";
+  /* fa-caret-down */
+  width: auto;
+  transition: transform 0.2s;
+}
+.accordiansWrapper .accordion-button:not(.collapsed)::after {
+  content: "\f0d8";
+  /* fa-caret-up */
+}
+
+footer {
+  background: linear-gradient(180deg, #000000 0%, #572605 34.13%, #000000 100%);
+  padding-top: 50px;
+  color: #fff;
+  font-family: "Satoshi", sans-serif;
+}
+footer .footerLogo img {
+  border-radius: 5px;
+}
+footer .footerLogo p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+footer .footerLinks h2,
+footer .socialLinks h2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer .footerLinks ul,
+footer .socialLinks ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer .footerLinks ul li a,
+footer .socialLinks ul li a {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+footer .address h2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer .address p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+footer .address .newsLatter {
+  border-bottom: 1px solid #9e938b;
+  padding-bottom: 10px;
+}
+footer .address .newsLatter label {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer .address .newsLatter i {
+  font-size: 20px;
+}
+footer .address .newsLatter input {
+  border: none;
+  background-color: transparent;
+  padding-left: 20px;
+  width: 100%;
+  color: #fff;
+}
+footer .address .newsLatter input:hover, footer .address .newsLatter input:focus {
+  outline: none;
+  border: none;
+  color: #fff;
+}
+footer .address .newsLatter button {
+  background-color: #FF6600;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  border: none;
+}
+footer .address .newsLatter button i {
+  font-size: 16px;
+}
+footer .address .errorBox {
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+  color: red;
+}
+footer .contacts span,
+footer .contacts a {
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .copyRight {
+  background-color: #000;
+  text-align: center;
+  padding: 25px 0px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .rightBtn a {
+    padding: 10px 18px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .rightBtn a {
+    padding: 10px 11px;
+    font-size: 12px;
+  }
+  .rightBtn a i {
+    display: none;
+  }
+  .heroSection {
+    min-height: auto;
+  }
+  .heroSection h1 {
+    font-size: 60px;
+  }
+  .whyUsImg {
+    display: none;
+  }
+  .whyUs p {
+    font-size: 18px;
+  }
+  .whyUsCards {
+    padding: 12px;
+  }
+  .whyUsCards h3 {
+    font-size: 16px;
+    word-break: break-all;
+  }
+  .whyUsCards img {
+    max-width: 30px;
+  }
+  .footerLogo p br {
+    display: none;
+  }
+  footer .contacts span,
+  footer .contacts a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .nav,
+  .rightBtn {
+    display: none;
+  }
+  nav .nav {
+    margin: 20px 0px;
+  }
+  nav .nav li {
+    margin: 10px 0px;
+  }
+  nav .nav .rightBtn {
+    display: inline-block;
+  }
+  nav .nav .rightBtn a {
+    background-color: #FF6600;
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+  }
+  nav .nav .rightBtn a i {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .hamburger i {
+    font-size: 22px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .heroSection h1 {
+    font-size: 44px;
+  }
+  .aboutUsSection .ourQuotelines h3 {
+    font-size: 26px;
+  }
+  .aboutUsSection .statsWrapper .statBox {
+    margin-bottom: 20px;
+  }
+  .aboutUsSection .ourPartners img {
+    max-width: 150px;
+  }
+  .quoteImg {
+    margin-bottom: 20px;
+  }
+  .whyUs h2 {
+    font-size: 40px;
+  }
+  .whyUs p {
+    font-size: 16px;
+  }
+  .testimonialSec h2 {
+    font-size: 26px;
+  }
+  .testimonialSec .owl-nav {
+    top: -72px;
+  }
+  footer .contacts span,
+  footer .contacts a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576.98px) {
+  .heroSection {
+    padding: 115px 0px 30px 0px;
+  }
+  .heroSection h1 {
+    font-size: 35px;
+  }
+  .heroSection a button {
+    padding: 7px 30px;
+  }
+  .aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon):nth-child(2) {
+    margin-top: 50px;
+  }
+  .aboutUsSection .ourMissionAndVision .images img:not(.metaAddIcon):nth-child(3) {
+    margin-top: 100px;
+  }
+  .aboutUsSection .ourMissionAndVision .images .metaAddIcon {
+    display: none;
+  }
+  .whyUs h2 {
+    font-size: 36px;
+  }
+  .whyUsCards h3 {
+    font-size: 15px;
+    word-break: normal;
+  }
+  .ourServicesSec .service img:not(.arrowBlack) {
+    max-width: 100px;
+    margin-top: -65px;
+  }
+  .ourServicesSec .service h3 {
+    font-size: 18px;
+  }
+  .ourServicesSec .service a {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .testimonialSec {
+    padding: 50px 20px;
+  }
+  .testimonialSec .owl-nav {
+    display: none;
+  }
+  .accordiansWrapper {
+    padding: 15px;
+  }
+  .timeline-number {
+    width: 40px;
+    height: 40px;
+  }
+  .timeline-line {
+    left: 20px;
+  }
+  .timeline-step {
+    padding-left: 55px;
+  }
+  .timeline-content {
+    padding: 15px;
+  }
+  .leftImg,
+  .rightImg,
+  .rightImg2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 425.98px) {
+  .heroSection h1 {
+    font-size: 25px;
+  }
+  .heroSection p {
+    font-size: 14px;
+  }
+  .aboutUsSection .ourQuotelines h2 {
+    font-size: 20px;
+  }
+  .aboutUsSection .ourQuotelines h3 {
+    font-size: 24px;
+  }
+  .aboutUsSection .ourMissionAndVision h2 {
+    font-size: 24px;
+  }
+  .whyUs h2 {
+    font-size: 30px;
+  }
+  .ourServicesSec .top h2 {
+    font-size: 22px;
+  }
+  .ourServicesSec .top p {
+    font-size: 14px;
+  }
+  .ourServicesSec .service {
+    padding: 10px 10px 65px 10px;
+  }
+  .ourServicesSec .service a {
+    min-width: 90%;
+  }
+  .ourServicesSec .service a .arrowBlack {
+    display: none;
+  }
+  .ourServices h2 {
+    font-size: 22px;
+  }
+  .ourServices p {
+    font-size: 14px;
+  }
+  .testimonialSec h2 {
+    font-size: 24px;
+  }
+  .faqSec h2 {
+    font-size: 36px;
+  }
+  .accordiansWrapper {
+    padding: 15px 5px;
+  }
 }/*# sourceMappingURL=index.css.map */
