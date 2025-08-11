@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
+   
 </head>
 
 <body>
@@ -48,7 +49,8 @@
     </header>
     <section class="heroSection">
         <div class="container">
-            <h1>Grow your E-commerce <br> <span>Beauty Brand</span> With us</h1>
+            <h1>Grow your E-commerce <br> <span class="rotating-container"><span id="brand" class="rotating-text">Beauty
+                        Brand</span></span> With us</h1>
             <div class="row">
                 <div class="col-lg-8">
                     <p class="py-3">In today's digital world, a solid online presence is needed for the growth and
@@ -89,20 +91,33 @@
             <div class="ourQuotelines">
                 <h2 class="text-center">From Vision to Victory</h2>
                 <h3 class="text-center">Plan Bold . Smart Execute . Grow Limitless</h3>
+
                 <div class="row mt-4">
-                    <div class="col-md-4 col-sm-4 ">
-                        <div class="quoteImg">
-                            <img src="./images/quote.png" alt="quote">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="chartWrapper">
+                            <div class="chart-title">Ad Spend Managed</div>
+                            <div class="chart-value">$25000+</div>
+                            <div class="chart-container">
+                                <canvas id="chart1"></canvas>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 ">
-                        <div class="quoteImg">
-                            <img src="./images/quote.png" alt="quote">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="chartWrapper">
+                            <div class="chart-title">Revenue Generated</div>
+                            <div class="chart-value">$750000+</div>
+                            <div class="chart-container">
+                                <canvas id="chart2"></canvas>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 ">
-                        <div class="quoteImg">
-                            <img src="./images/quote.png" alt="quote">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="chartWrapper">
+                            <div class="chart-title">Brands Worked With</div>
+                            <div class="chart-value">175+ Brands</div>
+                            <div class="chart-container">
+                                <canvas id="chart3"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,6 +214,108 @@
                 </div>
             </div>
             <div class="row mt-4">
+                <!-- Card 1 -->
+                <div class="col-md-3 col-12 mb-4 mb-md-0">
+                    <div class="whyUsCards">
+                        <div class="card-inner">
+                            <!-- Front -->
+                            <div class="card-front">
+                                <img src="./images/whyUsIcon1.png" alt="icon">
+                                <h3>Clear Objective</h3>
+                                <div class="text-end">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div class="card-back">
+                                <img src="./images/whyUsIcon1.png" alt="icon">
+                                <h3>Clear Objective</h3>
+                                <p>Setting laser-sharp goals for traffic, leads, conversions & more.</p>
+                                <div class="text-start">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-3 col-12 mb-4 mb-md-0">
+                    <div class="whyUsCards">
+                        <div class="card-inner">
+                            <!-- Front -->
+                            <div class="card-front">
+                                <img src="./images/whyUsIcon2.png" alt="icon">
+                                <h3>Implementation</h3>
+                                <div class="text-end">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div class="card-back">
+                                <img src="./images/whyUsIcon2.png" alt="icon">
+                                <h3>Implementation</h3>
+                                <p>Efficiently executing tailored strategies to achieve measurable success.</p>
+                                <div class="text-start">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3 col-12 mb-4 mb-md-0">
+                    <div class="whyUsCards">
+                        <div class="card-inner">
+                            <!-- Front -->
+                            <div class="card-front">
+                                <img src="./images/whyUsIcon3.png" alt="icon">
+                                <h3>Comprehensive Analysis</h3>
+                                <div class="text-end">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div class="card-back">
+                                <img src="./images/whyUsIcon3.png" alt="icon">
+                                <h3>Comprehensive Analysis</h3>
+                                <p>In-depth evaluation to refine campaigns and maximize ROI.</p>
+                                <div class="text-start">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3 col-12 mb-4 mb-md-0">
+                    <div class="whyUsCards">
+                        <div class="card-inner">
+                            <!-- Front -->
+                            <div class="card-front">
+                                <img src="./images/whyUsIcon4.png" alt="icon">
+                                <h3>Transparent Reporting</h3>
+                                <div class="text-end">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div class="card-back">
+                                <img src="./images/whyUsIcon4.png" alt="icon">
+                                <h3>Transparent Reporting</h3>
+                                <p>Clear and concise performance tracking with actionable insights.</p>
+                                <div class="text-start">
+                                    <a href="#"><img src="./images/arrow.png" alt="Arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row mt-4">
                 <div class="col-md-3 col-6 mb-4 mb-md-0">
                     <div class="whyUsCards position-relative">
                         <img src="./images/whyUsIcon1.png" alt="icon">
@@ -206,6 +323,7 @@
                         <div class="text-end "><a href=""><img src="./images/arrow.png" alt="Arrrow"></a></div>
                     </div>
                 </div>
+
                 <div class="col-md-3 col-6 mb-4 mb-md-0">
                     <div class="whyUsCards position-relative">
                         <img src="./images/whyUsIcon2.png" alt="icon">
@@ -227,12 +345,133 @@
                         <div class="text-end "><a href=""><img src="./images/arrow.png" alt="Arrrow"></a></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <section class="ourServicesSec">
         <div class="container">
+
+            <div class="clientLogosWrapper ">
+                <h2 class="text-center py-5">Our Epic Brand Partners</h2>
+                <div class="row ">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/qbjJpsvjR1FZFqWrpp0pXwQ53vvk2MiwjcLVBE5MoeY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzExLzg0LzUxLzQ1/LzM2MF9GXzExODQ1/MTQ1NzBfd3lWQXgz/Q2NWamVPVXJnWWY1/Q09zN2dxOGZDUkJt/bUwuanBn"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/CGfuFU35rbBgILyJTwjCdrTbnn2xSZ-eikrnAg_iFn4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzg5LzExLzcw/LzM2MF9GXzExODkx/MTcwOTBfOHRHZDNO/WWRQMWtrQVlxTUVm/U0dWZXpqc2drZkJw/aWsuanBn"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/4ik_swFnYAf5V3V5ay7FPG61HqO7XltUQJBMlKH8Y8I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzU3LzUyLzUz/LzM2MF9GXzc1NzUy/NTM3MV9zOGdWRUZh/eUZBQzZUdjhPMU9K/N3ZKdXJhV0p2WFdn/TC5qcGc"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/7C1i8QEiM8__CrOFDpmx-vv_xJg9X0j4DqU63rrPgIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nb21ha2VyLmNv/bS9hcGkvbWFpbi9p/bWFnZXMvMWorb2pW/QkNPTWtYOVcrdGV4/ZTQxQ1AyeTdLTjZF/Z1BoVUtTZ0dGOU5t/a2J0VmNzblNFN3hx/cy4uLitQMHRkRWhI/N0ZBZDN4VUNEcmxL/OXpRZkpPaHhuR0lR/blVxYlpZbE9PQUlC/dVZ0NlI1RnllUVUu/Li5MMDJERlBxWXBr/azZ6Yk1oeDgwU29G/ek1BV0hpU2lDRktv/SnZjY1E9"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/IoKodjkoY6tzVKOWkal63M2K6sv85JoElSeUeMgJ1Ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmJyYW5kY3Jv/d2QuY29tL2Fzc2V0/L2xvZ28vYmUzMTli/ZjktZGM1ZS00NGNi/LTk4YjQtY2JhM2Q5/Y2JmYmUzL2xvZ28t/c2VhcmNoLWdyaWQt/MXg_bG9nb1RlbXBs/YXRlVmVyc2lvbj0y/JnY9NjM4NTgxMTEw/MzE0NzAwMDAw"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/BiAtoRvIXSHuofO-cllHtnaJvF3heYKjSvuyylO5TGA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmJyYW5kY3Jv/d2QuY29tL2Fzc2V0/L2xvZ28vZjFjMTVh/NTEtMjZkNy00Zjg1/LTlhMjAtY2JjY2Q5/OWIxNTU5L2xvZ28t/c2VhcmNoLWdyaWQt/MXg_bG9nb1RlbXBs/YXRlVmVyc2lvbj0x/JnY9NjM3Njg0ODEx/MDY4MjMwMDAw"
+                                alt="client logo">
+                        </div>
+                    </div> -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/uJT_0OrwxPIGa4LEXbKOrZora5r_NnlVLcLx1FndOew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmZv/cm1hY29ubmVjdC5j/b20vdXBsb2Fkcy8x/OTUwOGM4MS01MThj/LTQ1NDctOTBlNi03/Y2FkZDc2ZGNlMjEt/My00NzNkODRiYzgx/ZTY2M2YxMTY2ZDll/MjZkNjljMmM5Yy5w/bmc"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/dXdjpq5jzi4ayeM9g-g2w7tn145ffiITU3ZMT_amM68/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly85OWRl/c2lnbnMtYmxvZy5p/bWdpeC5uZXQvYmxv/Zy93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNS9TY3JlZW4t/U2hvdC0yMDIyLTA1/LTIzLWF0LTEyLjI3/LjI1LVBNLWUxNjUz/NDYzODI1Nzc2LnBu/Zz9hdXRvPWZvcm1h/dCZxPTYwJmZpdD1t/YXgmdz05MzA"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/YTNFkvamEaDAqzzqI0N-1hMS1s8a2rmNHgObYzLk8zU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaWdp/bnNpZ2h0cy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDMvZmVkZXgtc3F1/YXJlLnBuZy53ZWJw"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/M0pGVa1jE0iVupcm36DWmpyOspYo_aKLPzm3iXU_bYc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmZv/cm1hY29ubmVjdC5j/b20vdXBsb2Fkcy8x/OTUwOGM4MS01MThj/LTQ1NDctOTBlNi03/Y2FkZDc2ZGNlMjEt/Ny01NGVkMmM0MGYw/YzI5ZGM3NTE1ZGQw/MjhkMjFkMWQ5OS5w/bmc"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/9uqdqUjIHA9Pr3twVLmoq4c8Bk_E3AC8f1NuLwNzWS0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmti/b3RkZXNpZ24uY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDI0/LzA1L3BpbnRlcmVz/dC1sb2dvLWRlc2ln/bi0xMDI0eDU1OS53/ZWJw"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/VyeGMcVgRgqDi0gmoJn7bREg-abn13NfNNhq_za7mSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Ymx1bGVhZHouY29t/L2hzLWZzL2h1YmZz/L0Jsb2dfcGljcy81/NDRweC1Hb29nbGVf/MjAxNV9sb2dvLnN2/Zy5wbmc_d2lkdGg9/MzU1Jm5hbWU9NTQ0/cHgtR29vZ2xlXzIw/MTVfbG9nby5zdmcu/cG5n"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/37wb4OZWlVx8GcsV3xB2APhkNhNjQ0v1yEnaKB5qCXM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vYmJhM2Uz/OGEwMGZhZDIzNThk/NWFlMzIwZTFlMzIy/NmExNWE0YzU1YS0x/NjAweDUwMC5wbmc_/dz0xOTIwJnE9NzIm/Zm09d2VicA"
+                                alt="client logo">
+                        </div>
+                    </div>
+                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/4ik_swFnYAf5V3V5ay7FPG61HqO7XltUQJBMlKH8Y8I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzU3LzUyLzUz/LzM2MF9GXzc1NzUy/NTM3MV9zOGdWRUZh/eUZBQzZUdjhPMU9K/N3ZKdXJhV0p2WFdn/TC5qcGc"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/7C1i8QEiM8__CrOFDpmx-vv_xJg9X0j4DqU63rrPgIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nb21ha2VyLmNv/bS9hcGkvbWFpbi9p/bWFnZXMvMWorb2pW/QkNPTWtYOVcrdGV4/ZTQxQ1AyeTdLTjZF/Z1BoVUtTZ0dGOU5t/a2J0VmNzblNFN3hx/cy4uLitQMHRkRWhI/N0ZBZDN4VUNEcmxL/OXpRZkpPaHhuR0lR/blVxYlpZbE9PQUlC/dVZ0NlI1RnllUVUu/Li5MMDJERlBxWXBr/azZ6Yk1oeDgwU29G/ek1BV0hpU2lDRktv/SnZjY1E9"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/IoKodjkoY6tzVKOWkal63M2K6sv85JoElSeUeMgJ1Ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9keW5h/bWljLmJyYW5kY3Jv/d2QuY29tL2Fzc2V0/L2xvZ28vYmUzMTli/ZjktZGM1ZS00NGNi/LTk4YjQtY2JhM2Q5/Y2JmYmUzL2xvZ28t/c2VhcmNoLWdyaWQt/MXg_bG9nb1RlbXBs/YXRlVmVyc2lvbj0y/JnY9NjM4NTgxMTEw/MzE0NzAwMDAw"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/uJT_0OrwxPIGa4LEXbKOrZora5r_NnlVLcLx1FndOew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmZv/cm1hY29ubmVjdC5j/b20vdXBsb2Fkcy8x/OTUwOGM4MS01MThj/LTQ1NDctOTBlNi03/Y2FkZDc2ZGNlMjEt/My00NzNkODRiYzgx/ZTY2M2YxMTY2ZDll/MjZkNjljMmM5Yy5w/bmc"
+                                alt="client logo">
+                        </div>
+                    </div>
+                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/CGfuFU35rbBgILyJTwjCdrTbnn2xSZ-eikrnAg_iFn4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzg5LzExLzcw/LzM2MF9GXzExODkx/MTcwOTBfOHRHZDNO/WWRQMWtrQVlxTUVm/U0dWZXpqc2drZkJw/aWsuanBn"
+                                alt="client logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="cilentLogos">
+                            <img src="https://imgs.search.brave.com/dXdjpq5jzi4ayeM9g-g2w7tn145ffiITU3ZMT_amM68/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly85OWRl/c2lnbnMtYmxvZy5p/bWdpeC5uZXQvYmxv/Zy93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNS9TY3JlZW4t/U2hvdC0yMDIyLTA1/LTIzLWF0LTEyLjI3/LjI1LVBNLWUxNjUz/NDYzODI1Nzc2LnBu/Zz9hdXRvPWZvcm1h/dCZxPTYwJmZpdD1t/YXgmdz05MzA"
+                                alt="client logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="top">
                 <h2 class="text-center mb-3">Our Expertise In Digital Marketing Services in Delhi </h2>
                 <p>Here, we take pride in being one of the top digital marketing agency in Delhi. Our range of services
@@ -264,8 +503,9 @@
                                 <img src="./images/seoIcon.png" alt="services icon">
                                 <h3>Seo</h3>
                                 <p>Improves Your Website’s Ranking for Maximum Visibility on Google.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -273,8 +513,9 @@
                                 <img src="./images/smmIcon.png" alt="services icon">
                                 <h3>Social Media Marketing</h3>
                                 <p>Builds your brand’s presence on platforms like Instagram, Facebook, and LinkedIn</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -282,8 +523,9 @@
                                 <img src="./images/marketplaceIcon.png" alt="services icon">
                                 <h3>Marketplace</h3>
                                 <p>Delivering Personalized Emails to Boost Customer Engagement.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -291,8 +533,9 @@
                                 <img src="./images/metaAddIcon.png" alt="services icon">
                                 <h3>Meta Advertising</h3>
                                 <p>Delivering Personalized Emails to Boost Customer Engagement.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -300,8 +543,9 @@
                                 <img src="./images/emailMarketingIcon.png" alt="services icon">
                                 <h3>Email Marketing</h3>
                                 <p>Engaging Blogs, Website Content, and More to Captivate the Right Audience.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -309,8 +553,9 @@
                                 <img src="./images/codeIcon.png" alt="services icon">
                                 <h3>Website Design & Development</h3>
                                 <p>Crafting Stunning, User-Friendly Websites for a Seamless Experience.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -318,8 +563,9 @@
                                 <img src="./images/ppcIcon.png" alt="services icon">
                                 <h3>PPC Marketing</h3>
                                 <p>Crafting Personalized Emails to Connect, Engage, and Convert.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 my-sm-5 my-4">
@@ -327,8 +573,9 @@
                                 <img src="./images/contentWriterIcon.png" alt="services icon">
                                 <h3>Content Writing</h3>
                                 <p>Crafting Personalized Emails to Connect, Engage, and Convert.</p>
-                                <a href="">KNOW MORE <img src="./images/arrow_black.png" class="arrowBlack"
-                                        alt="arrow"></a>
+                                <a href="">KNOW MORE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -336,6 +583,8 @@
             </div>
         </div>
     </section>
+
+
 
     <section class="ourProcess">
         <div class="container">
@@ -617,130 +866,15 @@
             © 2024 Copyright by UI Wiki
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/counterup2@1.0.4/dist/index.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"></script>
-    <script>
-        // Fix for counterUp2 module not available in global scope
-        const counterUp = window.counterUp.default;
-
-        $(document).ready(function () {
-            $('.statBox h3 span').each(function () {
-                var el = this;
-                var waypoint = new Waypoint({
-                    element: el,
-                    handler: function () {
-                        counterUp(el, {
-                            duration: 1500,
-                            delay: 10
-                        });
-                        this.destroy(); // run only once
-                    },
-                    offset: 'bottom-in-view'
-                });
-            });
-
-            $('.testimonialSlider').owlCarousel({
-                loop: true,
-                margin: 20,
-                responsiveClass: true,
-                autoplay: true,
-                autoPlay: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    576: {
-                        items: 1,
-                        nav: false
-                    },
-                    770: {
-                        items: 2,
-                        nav: false
-                    },
-                    1000: {
-                        items: 3,
-                        nav: true,
-                        loop: true
-                    }
-                },
-            });
-            $('.testimonialSlider .owl-next').html('<i class="fa-solid fa-arrow-right"></i>');
-            $('.testimonialSlider .owl-prev').html('<i class="fa-solid fa-arrow-left"></i>');
-            $('.ourPartners').owlCarousel({
-                loop: true,
-                margin: 10,
-                responsiveClass: true,
-                autoplay: true,
-                autoPlay: true,
-                responsive: {
-                    0: {
-                        items: 2,
-                        nav: true
-                    },
-                    576: {
-                        items: 3,
-                        nav: false
-                    },
-                    1000: {
-                        items: 5,
-                        nav: true,
-                        loop: true
-                    }
-                }
-            });
-
-            function checkTimelinePosition() {
-                const windowHeight = $(window).height();
-                const windowCenter = $(window).scrollTop() + windowHeight / 2;
-
-                let activeStep = null;
-                let minDistance = Infinity;
-
-                $('.timeline-step').each(function () {
-                    const $step = $(this);
-                    const stepTop = $step.offset().top;
-                    const stepHeight = $step.outerHeight();
-                    const stepCenter = stepTop + stepHeight / 2;
-
-                    // Calculate distance from window center
-                    const distance = Math.abs(windowCenter - stepCenter);
-
-                    // Find the closest step to center
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        activeStep = $step;
-                    }
-                });
-
-                // Remove active class from all steps
-                $('.timeline-step').removeClass('active');
-
-                // Add active class to closest step (if within reasonable distance)
-                if (activeStep && minDistance < 300) {
-                    activeStep.addClass('active');
-                }
-            }
-
-            // Check position on scroll
-            $(window).on('scroll', function () {
-                checkTimelinePosition();
-            });
-
-            // Initial check on page load
-            checkTimelinePosition();
-
-        });
-        $('.hamburger').click(function () {
-            $('.nav').slideToggle();
-            $('nav').toggleClass('active');
-        });
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
