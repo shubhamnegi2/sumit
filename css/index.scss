@@ -117,45 +117,43 @@ header {
         font-weight: 600;
         font-size: 70px;
         color: #fff;
+    }
 
-        span {
-            color: #FF6600;
-        }
+    h1 span {
+        color: #FF6600;
     }
 
     .rotating-container {
         display: inline-block;
-        height: 1.2em;
-        overflow: hidden;
         vertical-align: bottom;
     }
 
-    .rotating-text {
-        display: block;
-        animation: slide 2s ease forwards;
+    .typing-text {
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
     }
 
-    @keyframes slide {
-        0% {
-            transform: translateY(100%);
-            opacity: 0;
-        }
+    /* Blinking cursor */
+    .typing-text::after {
+        content: "";
+        position: absolute;
+        right: -3px;
+        top: 50%;
+        transform: translate(0, -50%);
+        bottom: 0;
+        width: 2px;
+        height: 80%;
+        background-color: #FF6600;
+        animation: blink 0.7s steps(1) infinite;
+    }
 
-        30% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        70% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(-100%);
+    @keyframes blink {
+        50% {
             opacity: 0;
         }
     }
+
 
     p {
         font-family: 'Satoshi', sans-serif;

@@ -103,6 +103,7 @@ header {
   min-height: 100vh;
   font-family: "DM Sans", sans-serif;
   padding: 150px 0px 100px 0px;
+  /* Blinking cursor */
 }
 .heroSection h1 {
   font-weight: 600;
@@ -114,29 +115,27 @@ header {
 }
 .heroSection .rotating-container {
   display: inline-block;
-  height: 1.2em;
-  overflow: hidden;
   vertical-align: bottom;
 }
-.heroSection .rotating-text {
-  display: block;
-  animation: slide 2s ease forwards;
+.heroSection .typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
 }
-@keyframes slide {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  30% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
+.heroSection .typing-text::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translate(0, -50%);
+  bottom: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #FF6600;
+  animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
     opacity: 0;
   }
 }

@@ -68,6 +68,8 @@ $(document).ready(function () {
         }
     });
 
+    document
+
     function checkTimelinePosition() {
         const windowHeight = $(window).height();
         const windowCenter = $(window).scrollTop() + windowHeight / 2;
@@ -117,35 +119,57 @@ $(document).ready(function () {
 
 
     const phrases = [
-        'Beauty Brand',
-        'Ayurvedic brand',
-        'Luxury brand',
-        'Home decor brand',
-        'Sports brand',
-        'Skincare brand',
+        'Beauty ',
+        'Ayurvedic ',
+        'Luxury ',
+        'Home decor ',
+        'Sports ',
+        'Skincare ',
         'Organic cosmetics',
-        'Wellness brand',
+        'Wellness ',
         'Fragrance label',
-        'Haircare brand',
+        'Haircare ',
         'Makeup label',
-        'Selfcare brand',
-        'Eco-friendly brand',
+        'Selfcare ',
+        'Eco-friendly ',
         'Handmade goods',
         'Subscription box'
     ];
 
     let index = 0;
+    let charIndex = 0;
+    let deleting = false;
     const brandEl = document.getElementById('brand');
 
-    function changeText() {
-        brandEl.classList.remove('rotating-text');
-        void brandEl.offsetWidth; // trigger reflow
-        index = (index + 1) % phrases.length;
-        brandEl.textContent = phrases[index];
-        brandEl.classList.add('rotating-text');
+    function typeEffect() {
+        let currentPhrase = phrases[index];
+
+        if (!deleting) {
+            // Typing forward
+            brandEl.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentPhrase.length) {
+                deleting = true;
+                setTimeout(typeEffect, 1000); // pause before deleting
+                return;
+            }
+        } else {
+            // Deleting
+            brandEl.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                deleting = false;
+                index = (index + 1) % phrases.length;
+            }
+        }
+
+        const speed = deleting ? 80 : 120; // typing & deleting speed
+        setTimeout(typeEffect, speed);
     }
 
-    setInterval(changeText, 1500);
+    typeEffect();
 
 
     // chart
@@ -301,7 +325,26 @@ $(document).ready(function () {
     $(window).resize(function () {
         adjustWhyUsHeight();
     });
+    $(window).on('load', function () {
+        adjustWhyUsHeight();
+    });
 });
-$(window).on('load', function () {
-    adjustWhyUsHeight();
-});
+
+
+let a = abc();
+console.log(a);
+
+
+function abc() {
+    console.log('hello');
+    
+    if (true) {
+        var A = 5;
+    }
+    if (true) {
+        A = 10
+    }
+    return A;
+}
+
+
