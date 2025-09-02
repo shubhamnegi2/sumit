@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css" />
 
 </head>
@@ -99,28 +100,28 @@
                 <h3 class="text-center">Plan Bold . Smart Execute . Grow Limitless</h3>
 
                 <div class="row mt-4">
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4" data-aos="fade-right">
                         <div class="chartWrapper">
                             <div class="chart-title">Ad Spend Managed</div>
-                            <div class="chart-value">$25000+</div>
+                            <div class="chart-value">$ <span>25000</span> +</div>
                             <div class="chart-container">
                                 <canvas id="chart1"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4" data-aos="fade-up">
                         <div class="chartWrapper">
                             <div class="chart-title">Revenue Generated</div>
-                            <div class="chart-value">$750000+</div>
+                            <div class="chart-value">$ <span>750000</span> +</div>
                             <div class="chart-container">
                                 <canvas id="chart2"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4" data-aos="fade-left">
                         <div class="chartWrapper">
                             <div class="chart-title">Brands Worked With</div>
-                            <div class="chart-value">175+ Brands</div>
+                            <div class="chart-value"><span>176</span>+ Brands</div>
                             <div class="chart-container">
                                 <canvas id="chart3"></canvas>
                             </div>
@@ -667,7 +668,7 @@
                 <p>Begin your journey with a seamless setup process.</p>
             </div>
             <div class="row my-4 justify-content-between">
-                
+
                 <div class="col-lg-3 col-md-4 firstSlide">
                     <div class="stepsWrapper position-relative text-center">
                         <img class="topImgIcon" src="./images/Icon1.png" alt="icon">
@@ -700,7 +701,7 @@
                 <div class="col-lg-3 col-md-4 secondSlide">
                     <div class="stepsWrapper position-relative text-center">
                         <!-- <img class="topImgIcon" src="./images/Icon1.png" alt="icon"> -->
-                         <i class="fa-solid fa-window-restore"></i>
+                        <i class="fa-solid fa-window-restore"></i>
                         <h3>Development</h3>
                         <p>Join in minutes to access all features and start your journey.</p>
                         <button>Learn more</button>
@@ -711,7 +712,7 @@
                 <div class="col-lg-3 col-md-4 my-4 mt-lg-5 secondSlide">
                     <div class="stepsWrapper position-relative text-center">
                         <!-- <img class="topImgIcon" src="./images/Icon2.png" alt="icon"> -->
-                         <i class="fa-solid fa-flask-vial"></i>
+                        <i class="fa-solid fa-flask-vial"></i>
                         <h3>Testing</h3>
                         <p>Explore and select the perfect solution tailored to your needs.</p>
                         <button>Learn more</button>
@@ -722,7 +723,7 @@
                 <div class="col-lg-3 col-md-4 secondSlide">
                     <div class="stepsWrapper position-relative text-center">
                         <!-- <img class="topImgIcon" src="./images/Icon3.png" alt="icon"> -->
-                         <i class="fa-solid fa-rocket"></i>
+                        <i class="fa-solid fa-rocket"></i>
                         <h3>Launch</h3>
                         <p>Complete the process and reach your goals effortlessly.</p>
                         <button>Learn more</button>
@@ -1040,7 +1041,87 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/index.js"></script>
+
+    <script>
+        // chart function
+        function createLineChart(canvasId, labels, dataPoints, highlightIndex) {
+            new Chart(document.getElementById(canvasId), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '',
+                        data: dataPoints,
+                        borderColor: '#f0f0ff',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.4,
+                        pointBackgroundColor: '#5B7BFE',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: function (context) {
+                            return context.dataIndex === highlightIndex ? 6 : 0;
+                        }
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    animation: {
+                        duration: 3000, // animation speed
+                        easing: 'easeOutQuart'
+                    },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { display: false }
+                    }
+                }
+            });
+        }
+
+        // observer
+        const chartConfigs = [
+            {
+                id: "chart1",
+                labels: ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
+                data: [10, 12, 15, 25, 30, 32, 35],
+                highlight: 4
+            },
+            {
+                id: "chart2",
+                labels: ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
+                data: [10, 22, 2, 68, 15, 5, 11],
+                highlight: 4
+            },
+            {
+                id: "chart3",
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                data: [20, 15, 30, 15, 5, 7, 90],
+                highlight: 6
+            }
+        ];
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const canvasId = entry.target.id;
+                    const config = chartConfigs.find(c => c.id === canvasId);
+                    if (config) {
+                        createLineChart(config.id, config.labels, config.data, config.highlight);
+                        obs.unobserve(entry.target); // run only once
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // attach observer to all chart canvases
+        chartConfigs.forEach(cfg => {
+            observer.observe(document.getElementById(cfg.id));
+        });
+    </script>
+
 </body>
 
 </html>

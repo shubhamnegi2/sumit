@@ -17,6 +17,20 @@ $(document).ready(function () {
             offset: 'bottom-in-view'
         });
     });
+    $('.chart-value span').each(function () {
+        var el = this;
+        var waypoint = new Waypoint({
+            element: el,
+            handler: function () {
+                counterUp(el, {
+                    duration: 1500,
+                    delay: 10
+                });
+                this.destroy(); // run only once
+            },
+            offset: 'bottom-in-view'
+        });
+    });
 
     $('.testimonialSlider').owlCarousel({
         loop: true,
@@ -121,6 +135,7 @@ $(document).ready(function () {
         // kick off the loop
         step();
     }
+    AOS.init();
 
     // start it
     startLoop();
@@ -227,55 +242,55 @@ $(document).ready(function () {
     typeEffect();
 
 
-    // chart
-    function createLineChart(canvasId, labels, dataPoints, highlightIndex) {
-        new Chart(document.getElementById(canvasId), {
-            type: 'line',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '',
-                    data: dataPoints,
-                    borderColor: '#f0f0ff',
-                    borderWidth: 2,
-                    fill: false,
-                    tension: 0.4,
-                    pointBackgroundColor: '#5B7BFE',
-                    pointBorderColor: '#fff',
-                    pointBorderWidth: 2,
-                    pointRadius: function (context) {
-                        return context.dataIndex === highlightIndex ? 6 : 0;
-                    }
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { grid: { display: false } },
-                    y: { display: false }
-                }
-            }
-        });
-    }
+    // // chart
+    // function createLineChart(canvasId, labels, dataPoints, highlightIndex) {
+    //     new Chart(document.getElementById(canvasId), {
+    //         type: 'line',
+    //         data: {
+    //             labels: labels,
+    //             datasets: [{
+    //                 label: '',
+    //                 data: dataPoints,
+    //                 borderColor: '#f0f0ff',
+    //                 borderWidth: 2,
+    //                 fill: false,
+    //                 tension: 0.4,
+    //                 pointBackgroundColor: '#5B7BFE',
+    //                 pointBorderColor: '#fff',
+    //                 pointBorderWidth: 2,
+    //                 pointRadius: function (context) {
+    //                     return context.dataIndex === highlightIndex ? 6 : 0;
+    //                 }
+    //             }]
+    //         },
+    //         options: {
+    //             responsive: true,
+    //             plugins: { legend: { display: false } },
+    //             scales: {
+    //                 x: { grid: { display: false } },
+    //                 y: { display: false }
+    //             }
+    //         }
+    //     });
+    // }
 
-    // Chart 1
-    createLineChart("chart1",
-        ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
-        [10, 12, 15, 25, 30, 32, 35], 4
-    );
+    // // Chart 1
+    // createLineChart("chart1",
+    //     ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
+    //     [10, 12, 15, 25, 30, 32, 35], 4
+    // );
 
-    // Chart 2
-    createLineChart("chart2",
-        ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
-        [10, 22, 2, 68, 15, 5, 11], 4
-    );
+    // // Chart 2
+    // createLineChart("chart2",
+    //     ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Dec'],
+    //     [10, 22, 2, 68, 15, 5, 11], 4
+    // );
 
-    // Chart 3 (Years)
-    createLineChart("chart3",
-        ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
-        [20, 15, 30, 15, 5, 7, 90], 6
-    );
+    // // Chart 3 (Years)
+    // createLineChart("chart3",
+    //     ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+    //     [20, 15, 30, 15, 5, 7, 90], 6
+    // );
 
     // image flip
 
