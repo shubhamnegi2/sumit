@@ -2,6 +2,7 @@
 const counterUp = window.counterUp.default;
 
 $(document).ready(function () {
+
     $('.statBox h3 span').each(function () {
         var el = this;
         var waypoint = new Waypoint({
@@ -68,7 +69,61 @@ $(document).ready(function () {
         }
     });
 
-    document
+    // function toggleSlides() {
+    //     $('.firstSlide').fadeIn(1000, function () {
+    //         $('.secondSlide').fadeOut(1000, function () {
+    //             setTimeout(function () {
+    //                 $('.firstSlide').fadeOut(1000, function () {
+    //                     $('.secondSlide').fadeIn(1000, function () {
+    //                         toggleSlides(); // repeat cycle
+    //                     });
+    //                 });
+    //             }, 1000); // delay 1 sec before switching back
+    //         });
+    //     });
+    // }
+    // toggleSlides();
+
+    var timer = null;
+    var showingFirst = true; // start with firstSlide visible
+
+    // initial state
+    $('.firstSlide').show();
+    $('.secondSlide').hide();
+
+    function startLoop() {
+        // clear any existing timer to avoid duplicates
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+
+        function step() {
+            if (showingFirst) {
+                // Pehle secondSlide ko hide karo, fir firstSlide ko show karo
+                $('.secondSlide').fadeOut(300, function () {
+                    $('.firstSlide').fadeIn(300);
+                });
+            } else {
+                // Pehle firstSlide ko hide karo, fir secondSlide ko show karo
+                $('.firstSlide').fadeOut(300, function () {
+                    $('.secondSlide').fadeIn(300);
+                });
+            }
+
+            // flip for next run
+            showingFirst = !showingFirst;
+
+            // schedule next toggle after 2 sec
+            timer = setTimeout(step, 2000);
+        }
+
+        // kick off the loop
+        step();
+    }
+
+    // start it
+    startLoop();
 
     function checkTimelinePosition() {
         const windowHeight = $(window).height();
@@ -337,7 +392,7 @@ console.log(a);
 
 function abc() {
     console.log('hello');
-    
+
     if (true) {
         var A = 5;
     }
