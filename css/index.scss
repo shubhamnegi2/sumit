@@ -891,6 +891,89 @@ header {
     box-shadow: 0 0 0 3px #FF6600;
 }
 
+.getStarted {
+    font-family: 'Satoshi', sans-serif;
+
+    h2 {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 50px;
+    }
+
+    .top p {
+        font-weight: 400;
+        font-size: 18px;
+        color: #00000066;
+    }
+
+
+
+    .stepsWrapper {
+        // border: 1px solid #000;
+        padding: 20px;
+
+        i {
+            font-size: 30px;
+            color: #FF3B30;
+            border: 3px solid #FF3B30;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .topImgIcon {
+            max-width: 60px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 24px;
+            color: #000;
+            margin: 15px 0px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #00000066;
+        }
+
+        button {
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: #FF6600;
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+
+        .stepNumber {
+            font-weight: 600;
+            font-size: 64px;
+            color: #DCDCDC;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .arrow1 {
+            position: absolute;
+            left: 110%;
+            top: 30px;
+        }
+
+        .arrow2 {
+            position: absolute;
+            left: 110%;
+            bottom: 50px;
+        }
+    }
+}
+
+.secondSlide {
+    display: none;
+}
 
 .testimonialSec {
     background: linear-gradient(180deg, #000000 0%, #572605 34.13%, #000000 100%);
@@ -1302,6 +1385,20 @@ footer {
             font-size: 14px;
         }
     }
+
+    .getStarted .stepsWrapper .arrow1,
+    .getStarted .stepsWrapper .arrow2 {
+        display: none;
+    }
+
+    .getStarted .stepsWrapper {
+        padding: 10px;
+    }
+
+    .getStarted .stepsWrapper .stepNumber {
+        right: 20px;
+        top: -10px;
+    }
 }
 
 // Media Query: Tablets and below (max-width: 767.98px)
@@ -1349,6 +1446,18 @@ footer {
                 }
             }
         }
+    }
+
+    .getStarted h2 {
+        font-size: 24px;
+    }
+
+    .getStarted .stepsWrapper button {
+        width: 100%;
+    }
+
+    .getStarted .top p {
+        font-size: 16px;
     }
 
     .hamburger {
